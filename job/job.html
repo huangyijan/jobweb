@@ -4,17 +4,20 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="./css/job.css">
+		<link rel="stylesheet" type="text/css" href="./job.css">
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
 	</head>
 
 	<body>
-		<div class="container">
+		<div id="root" class="container">
 			<!-- 公司 -->
 			<div class="banner">
 				<p>什么值得投</p>
 				<ul>
 					<li>
-						<img src="./image/zijietiaodong.jpeg">
+						<img src="./1.jpeg">
 						<p>字节跳动</p>
 						<div class="wrap">
 							<div class="enter">
@@ -24,31 +27,32 @@
 						</div>
 					</li>
 					<li>
-						<img src="./image/zijietiaodong.jpeg">
-						<p>字节跳动</p>
+						<img src="./3.png">
+						<p>有鱼金融科技</p>
 						<div class="wrap">
 							<div class="enter">
-								<p>你关心的才是头条</p>
+								<p>7年老牌互联网公司，有初创团队的狼性，又有雄厚的资金做为后盾保证，快点加入我们…</p>
 								<div class="coming">进入公司主页</div>
 							</div>
 						</div>
 					</li>
 					<li>
-						<img src="./image/zijietiaodong.jpeg">
-						<p>字节跳动</p>
+						<img src="./2.jpeg">
+
+						<p>美团点评</p>
 						<div class="wrap">
 							<div class="enter">
-								<p>你关心的才是头条</p>
+								<p>点亮未来，共同成长。</p>
 								<div class="coming">进入公司主页</div>
 							</div>
 						</div>
 					</li>
 					<li>
-						<img src="./image/zijietiaodong.jpeg">
-						<p>字节跳动</p>
+						<img src="./4.jpg">
+						<p>腾讯科技</p>
 						<div class="wrap">
 							<div class="enter">
-								<p>你关心的才是头条</p>
+								<p>成为互联网的水和电</p>
 								<div class="coming">进入公司主页</div>
 							</div>
 						</div>
@@ -120,228 +124,28 @@
 				<div class="center">
 					<ul class="list">
 						<li>
-							<div id="job-long">
+							<div class="job-long" v-for="item in company">
 								<div class="job-up">
 									<div class="job-up-pos">
 										<div class="pos-o">
 											<a href="#">
-												<h3>技术总监</h3></a>
+												<h3>{{item.name}}</h3></a>
 										</div>
 										<div class="pos-l">
-											<span class="money">20k-40k</span> &nbsp;&nbsp;经验十年以上/本科
+											<span class="money">{{item.salary}}</span> &nbsp;&nbsp;{{item.limit}}/{{item.education}}
 										</div>
 									</div>
 									<div class="job-up-com">
 										<div class="pos-o">
 											<a href="#">
-												<h3>明动软件</h3></a>
+												<h3>{{item.company}}</h3></a>
 										</div>
 										<div class="pos-l">
 											<span>企业服务,数据服务 / 上市公司 / 150-500人</span>
 										</div>
 									</div>
 									<div class="job-up-img">
-										<a href="#"><img src="./img/top-after.png" /></a>
-									</div>
-								</div>
-								<div class="job-down">
-									<div class="job-down-desc">
-										<div class="desc-o">
-											<span>技术管理</span>
-											<span>部门管理</span>
-											<span>团队建设</span>
-											<span>系统架构</span>
-										</div>
-									</div>
-									<div class="job-down-fuli">
-										<span>“上市公司,五险一金,周末双休,扁平管理”</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div id="job-long">
-								<div class="job-up">
-									<div class="job-up-pos">
-										<div class="pos-o">
-											<a href="#">
-												<h3>技术总监</h3></a>
-										</div>
-										<div class="pos-l">
-											<span class="money">20k-40k</span> &nbsp;&nbsp;经验十年以上/本科
-										</div>
-									</div>
-									<div class="job-up-com">
-										<div class="pos-o">
-											<a href="#">
-												<h3>明动软件</h3></a>
-										</div>
-										<div class="pos-l">
-											<span>企业服务,数据服务 / 上市公司 / 150-500人</span>
-										</div>
-									</div>
-									<div class="job-up-img">
-										<a href="#"><img src="./img/top-after.png" /></a>
-									</div>
-								</div>
-								<div class="job-down">
-									<div class="job-down-desc">
-										<div class="desc-o">
-											<span>技术管理</span>
-											<span>部门管理</span>
-											<span>团队建设</span>
-											<span>系统架构</span>
-										</div>
-									</div>
-									<div class="job-down-fuli">
-										<span>“上市公司,五险一金,周末双休,扁平管理”</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div id="job-long">
-								<div class="job-up">
-									<div class="job-up-pos">
-										<div class="pos-o">
-											<a href="#">
-												<h3>技术总监</h3></a>
-										</div>
-										<div class="pos-l">
-											<span class="money">20k-40k</span> &nbsp;&nbsp;经验十年以上/本科
-										</div>
-									</div>
-									<div class="job-up-com">
-										<div class="pos-o">
-											<a href="#">
-												<h3>明动软件</h3></a>
-										</div>
-										<div class="pos-l">
-											<span>企业服务,数据服务 / 上市公司 / 150-500人</span>
-										</div>
-									</div>
-									<div class="job-up-img">
-										<a href="#"><img src="./img/top-after.png" /></a>
-									</div>
-								</div>
-								<div class="job-down">
-									<div class="job-down-desc">
-										<div class="desc-o">
-											<span>技术管理</span>
-											<span>部门管理</span>
-											<span>团队建设</span>
-											<span>系统架构</span>
-										</div>
-									</div>
-									<div class="job-down-fuli">
-										<span>“上市公司,五险一金,周末双休,扁平管理”</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div id="job-long">
-								<div class="job-up">
-									<div class="job-up-pos">
-										<div class="pos-o">
-											<a href="#">
-												<h3>技术总监</h3></a>
-										</div>
-										<div class="pos-l">
-											<span class="money">20k-40k</span> &nbsp;&nbsp;经验十年以上/本科
-										</div>
-									</div>
-									<div class="job-up-com">
-										<div class="pos-o">
-											<a href="#">
-												<h3>明动软件</h3></a>
-										</div>
-										<div class="pos-l">
-											<span>企业服务,数据服务 / 上市公司 / 150-500人</span>
-										</div>
-									</div>
-									<div class="job-up-img">
-										<a href="#"><img src="./img/top-after.png" /></a>
-									</div>
-								</div>
-								<div class="job-down">
-									<div class="job-down-desc">
-										<div class="desc-o">
-											<span>技术管理</span>
-											<span>部门管理</span>
-											<span>团队建设</span>
-											<span>系统架构</span>
-										</div>
-									</div>
-									<div class="job-down-fuli">
-										<span>“上市公司,五险一金,周末双休,扁平管理”</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div id="job-long">
-								<div class="job-up">
-									<div class="job-up-pos">
-										<div class="pos-o">
-											<a href="#">
-												<h3>技术总监</h3></a>
-										</div>
-										<div class="pos-l">
-											<span class="money">20k-40k</span> &nbsp;&nbsp;经验十年以上/本科
-										</div>
-									</div>
-									<div class="job-up-com">
-										<div class="pos-o">
-											<a href="#">
-												<h3>明动软件</h3></a>
-										</div>
-										<div class="pos-l">
-											<span>企业服务,数据服务 / 上市公司 / 150-500人</span>
-										</div>
-									</div>
-									<div class="job-up-img">
-										<a href="#"><img src="./img/top-after.png" /></a>
-									</div>
-								</div>
-								<div class="job-down">
-									<div class="job-down-desc">
-										<div class="desc-o">
-											<span>技术管理</span>
-											<span>部门管理</span>
-											<span>团队建设</span>
-											<span>系统架构</span>
-										</div>
-									</div>
-									<div class="job-down-fuli">
-										<span>“上市公司,五险一金,周末双休,扁平管理”</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div id="job-long">
-								<div class="job-up">
-									<div class="job-up-pos">
-										<div class="pos-o">
-											<a href="#">
-												<h3>技术总监</h3></a>
-										</div>
-										<div class="pos-l">
-											<span class="money">20k-40k</span> &nbsp;&nbsp;经验十年以上/本科
-										</div>
-									</div>
-									<div class="job-up-com">
-										<div class="pos-o">
-											<a href="#">
-												<h3>明动软件</h3></a>
-										</div>
-										<div class="pos-l">
-											<span>企业服务,数据服务 / 上市公司 / 150-500人</span>
-										</div>
-									</div>
-									<div class="job-up-img">
-										<a href="#"><img src="./img/top-after.png" /></a>
+										<a href="#"><img :src="item.logo" /></a>
 									</div>
 								</div>
 								<div class="job-down">
@@ -362,22 +166,57 @@
 
 					</ul>
 					<!-- 分页 -->
-					<div class="page">
-						<ul>
-							<li>上一页</li>
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li class="ellipsis">······</li>
-							<li>20</li>
-							<li>下一页</li>
-						</ul>
+					<div style="width: 100%;text-align: center">
+						<el-pagination
+								layout="prev, pager, next"
+								:current-page.sync="number"
+								@current-change="handleCurrentChange"
+								:total="1000">
+						</el-pagination>
 					</div>
 				</div>
 
 			</div>
 
 		</div>
+		<script src="../vue.min.js"></script>
+		<!-- 引入组件库 -->
+		<script src="../jquery-3.3.1.min.js"></script>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<script>
+            var app = new Vue({
+                el: '#root',
+                data: {
+                    company: [],
+					number: 1
+                },
+                created(){
+                    this.getData()
+                },
+                methods: {
+                    handleCurrentChange(value){
+                        this.number=value
+						this.getData()
+					},
+                    go(id){
+                    },
+                    getData(){
+                        let that = this
+                        $.ajax({
+                            url: 'https://hyjweb.cn/api/getPage',
+							data: {
+                                page: that.number
+							} ,
+                            type: 'get',
+                            dataType: 'json',
+                            success: (data) => {
+                                that.company = data
+                            }
+                        })
+                    }
+                }
+            })
+		</script>
 	</body>
 
 </html>

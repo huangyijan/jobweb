@@ -196,7 +196,7 @@ ul {
 
 .container .container-inner .content>ul>li:hover {
 	box-shadow: 0 0 10px #ccc;
-	
+
 }
 
 .container .container-inner .content>ul>li p {
@@ -256,7 +256,7 @@ ul {
 .container .container-inner .page {
 	width: 100%;
 	margin: 0 auto;
-	
+
 }
 
 .container .container-inner .page ul {
@@ -293,7 +293,7 @@ ul {
 	height: 970px;
 
 }
-#job-long {
+.job-long {
 	width: 960px;
 	height: 124px;
 	position: relative;
@@ -301,14 +301,14 @@ ul {
 	border: 1px solid #DDDDDD;
 }
 
-#job-long .job-up {
+.job-long .job-up {
 	width: 960px;
 	height: 84px;
 	position: absolute;
 	top: 0;
 }
 
-#job-long .job-down {
+.job-long .job-down {
 	width: 960px;
 	height: 40px;
 	position: absolute;
@@ -367,7 +367,6 @@ ul {
 .job-up-img img {
 	width: 62px;
 	height: 62px;
-	position: ;
 	margin: 11px 9px;
 }
 
