@@ -7,13 +7,11 @@ body {/*bottom layer;white*/
 #container
 {
     position:static;
-    background:#eee;
-    margin:30px auto;
+    margin:50px auto;
    /* padding:15px;*/
     border:0px solid;
     border-radius:5px;
     font-size: 30px;
-    width: 60%;
 }
 /****************************************************/
 /***************************************************/
@@ -34,7 +32,7 @@ body {/*bottom layer;white*/
 #nav-bar ul li{
 	width: 80px;
 	border-right: 1px #666666 solid;
-	
+
 }
 #nav-bar ul li a{
 	text-decoration: none;
@@ -74,7 +72,6 @@ img{
 }
 #profile span span{
 	display: inline-block;
-	color: #666;
 }
 #file a{
 	text-decoration: none;

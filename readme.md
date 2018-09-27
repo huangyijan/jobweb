@@ -17,3 +17,5 @@
 公司列 公司列表接口， 参数： page：页码
 
 >* 线上地址：http://119.29.85.245:16443/job/home/index.html
+
+https://hyjweb.cn/api/search  搜索列表接口 参数： key：关键字， page：页码

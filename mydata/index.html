@@ -1,133 +1,93 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-		<link rel="stylesheet" href="css/我的简历.css" />
-		<script src="js/我的简历.js"></script>
-	</head>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="css/mydata.css"/>
+    <script src="js/mydata.js"></script>
+    <link rel="stylesheet" href="../components/global.css">
+</head>
 
-	<body>
-		<div class="header">
-			<div class="header-top">
-				<div class="header-top-left">
-					<p>定位：广州市
-						<a href="#" style="text-decoration: none;color:black">[更改]</a>
-					</p>
-				</div>
-				<div class="header-top-right">
+<body>
+<div id="root">
+    <header_nav></header_nav>
 
-					<p>
-						电话：123456789
-					</p>
+    <div class="content">
+        <div id="content-left">
+            <!--求职意愿 -->
+            <div class="content-left1">
+                <h1 style="font-family: 楷体, sans-serif;line-height: 100px;color: #fff;text-align: center;">求职意向</h1>
+                <p>姓名:&nbsp;&nbsp;张三</p>
+                <p>性别：&nbsp;&nbsp;男</p>
+                <p>求职状态:&nbsp;&nbsp;应届毕业生</p>
+                <p>期望工作地点:&nbsp;&nbsp;广州</p>
+                <p>期望从事行业:&nbsp;&nbsp;IT</p>
+                <p>期望月薪:&nbsp;&nbsp;10k</p>
 
-				</div>
-			</div>
-			<div class="header-center">
-				<h1>个人简历</h1></div>
-		</div>
-		<div class="container">
-			<div class="container-imfo">
-				<ul>
-					<li>
-						<a href="#">账号设置</a>
-					</li>
-					<li>
-						<a href="#">投递箱</a>
-					</li>
-					<li>
-						<a href="#">收藏夹</a>
-					</li>
-					<li>
-						<a href="#">消息</a>
-					</li>
-				</ul>
-			</div>
-			<div class="container-guide">
-				<img src="img/home.png" />
-				<ul>
-					<li>
-						<a href="#">公司</a>
-					</li>
-					<li>
-						<a href="#">校园</a>
-					</li>
-					<li>
-						<a href="#">言职</a>
-					</li>
-					<li>
-						<a href="#">首页</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="content">
-			<div id="content-left">
-				<!--求职意愿 -->
-				<div class="content-left1">					
-					<h1 style="font-weight: 900;color: white;text-align: center;">求职意向</h1>
-					<p>姓名:&nbsp;&nbsp;张三</p>
-					<p>性别：&nbsp;&nbsp;男</p>
-					<p>求职状态:&nbsp;&nbsp;应届毕业生</p>
-					<p>期望工作地点:&nbsp;&nbsp;广州</p>
-					<p>期望从事行业:&nbsp;&nbsp;IT</p>
-					<p>期望月薪:&nbsp;&nbsp;10k</p>
-			
-				</div>
-				<button id="button1" onclick="play()">编辑</button>
-				<div class="content-left-wanna" id="content-left-wannan">
-					<h1 style="font-weight: 400;color: snow;position: absolute;left: 10px;top: 10px;">求职意向</h1>
-					<form>
-						<p>姓名:&nbsp;<input value="张三"></p>
-						<p>性别:&nbsp;<select>
-							<option value="男">男</option>
-							<option value="女">女</option>
-						</select></p>
-						<p>求职状态:&nbsp;<input value="应届毕业生"></p>
-						<p>期望工作地点:&nbsp;<select>
-							<option value="广州">广州</option>
-						</select></p>
-						<p>期望从事行业:&nbsp;<input value="IT"></p>
-						<p>期望月薪:&nbsp;<input value="10k"></p>
-						<input value="提交" type="submit" style="margin-top:0px; left: 50%;width: 50px;height: 25px;" />
-					</form>
-				</div>
-			</div>
-			<div class="content-description">
-				<h1>个人履历</h1>
-				<input type="button" value="上传..." />
-				<img src="img/man.jpg" />
-				<p>自我描述：</p><textarea required="required"></textarea>
-			</div>
-		</div>
-				
-		<div id="btn">
-			<img src="img/飞机.png" />
-		</div>
-		<div class="footer">
-			<div class="footer1">
-				<ul>
-				<li><h1>企业服务</h1></li>
-				<li><a href="#">APP下载</a></li>
-				<li><a href="#">公司搜索</a></li>
-				</ul>
-			</div>
-			<div class="footer2">
-				<ul>
-				<li><h1>用户帮助</h1></li>
-				<li><a href="#">帮助中心</a></li>
-				<li><a href="#">在线提问</a></li>
-				</ul>
-			</div>
-			<div class="footer3">
-				<ul>
-				<li><h1>联系方式</h1></li>
-				<li><a href="#">服务热线：123456789</a></li>
-				<li><a href="#">企业服务邮箱：123@163.com</a></li>
-				<li><a href="#">联系我们</a></li>
-				</ul>
-			</div>
-		</div>
-	</body>
+            </div>
+            <button id="button1" onclick="play()">编辑</button>
+            <div class="content-left-wanna" id="content-left-wannan">
+                <h1 style="font-weight: 400;color: snow;position: absolute;left: 40px;top: 40px;margin-right: 50px">求职意向</h1>
+                <form style="padding-right: 200px">
+                    <p>姓名:&nbsp;<input value="张三"></p>
+                    <p>性别:&nbsp;<select>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select></p>
+                    <p>求职状态:&nbsp;<input value="应届毕业生"></p>
+                    <p>期望工作地点:&nbsp;<select>
+                        <option value="广州">广州</option>
+                    </select></p>
+                    <p>期望从事行业:&nbsp;<input value="IT"></p>
+                    <p>期望月薪:&nbsp;<input value="10k"></p>
+                    <input value="提交" type="submit" style="margin-top:0px; left: 50%;width: 50px;height: 25px;"/>
+                </form>
+            </div>
+        </div>
+        <div class="content-description">
+            <h1>个人履历</h1>
+            <input type="button" value="上传..."/>
+            <img src="img/man.jpg"/>
+            <p>自我描述：</p><textarea required="required"></textarea>
+        </div>
+    </div>
+
+    <div id="btn">
+        <img src="img/飞机.png"/>
+    </div>
+    <div class="footer">
+        <div class="footer1">
+            <ul>
+                <li><h1>企业服务</h1></li>
+                <li><a href="#">APP下载</a></li>
+                <li><a href="#">公司搜索</a></li>
+            </ul>
+        </div>
+        <div class="footer2">
+            <ul>
+                <li><h1>用户帮助</h1></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">在线提问</a></li>
+            </ul>
+        </div>
+        <div class="footer3">
+            <ul>
+                <li><h1>联系方式</h1></li>
+                <li><a href="#">服务热线：123456789</a></li>
+                <li><a href="#">企业服务邮箱：123@163.com</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../vue.min.js"></script>
+<script src="../jquery-3.3.1.min.js"></script>
+<script src="../components/header.js"></script>
+<script>
+    var app = new Vue({
+        el: '#root'
+    })
+</script>
+</body>
 </html>
