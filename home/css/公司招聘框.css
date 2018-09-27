@@ -130,7 +130,6 @@ body{
     box-shadow: 0 0 5px gray;
 }
 .bottom{
-    widows: 350px;
     height: 73px;
     /*	background-color: lawngreen;*/
     position: relative;
@@ -238,12 +237,12 @@ body{
 
 .container .container-inner .nav ul li:nth-child(2),
 .container .container-inner .sort ul li:nth-child(2) {
-    background: #00b38a;
+    background: #515151;
 }
 
 .container .container-inner .nav ul li:hover,
 .container .container-inner .sort ul li:hover {
-    background: #00b38a;
+    background: #515151;
 }
 
 .container .container-inner .sort {

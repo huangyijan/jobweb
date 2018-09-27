@@ -149,11 +149,13 @@ ul {
 .container .container-inner .nav ul li:nth-child(2),
 .container .container-inner .sort ul li:nth-child(2) {
 	background: #515151;
+	color: #fff;
 }
 
 .container .container-inner .nav ul li:hover,
 .container .container-inner .sort ul li:hover {
 	background: #515151;
+	color: #fff;
 }
 
 .container .container-inner .sort {
@@ -274,10 +276,12 @@ ul {
 
 .container .container-inner .page ul li:nth-child(2) {
 	background: #515151;
+	color: #fff;
 }
 
 .container .container-inner .page ul li:hover {
 	background: #515151;
+	color: #fff;
 }
 
 .container .container-inner .page ul .ellipsis {

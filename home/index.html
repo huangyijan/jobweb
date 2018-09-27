@@ -7,38 +7,12 @@
     <title>招聘网</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/公司招聘框.css"/>
+    <link rel="stylesheet" href="../components/global.css">
 </head>
 
 <body>
 <div id="all_container">
-    <!--导航栏Top-->
-    <div id="navi">
-        <ul class="navi-list" style="letter-spacing: 5px">
-            <li>
-                <a href="#">首页</a>
-            </li>
-            <li>
-                <a href="../company/index.html">公司</a>
-            </li>
-            <li>
-                <a href="#">校园</a>
-            </li>
-            <li>
-                <a href="#">言职</a>
-            </li>
-
-        </ul>
-        <ul class="navi-login" style="letter-spacing: 3px">
-            <li>
-                <a href="../login/login.html">登录</a>
-            </li>
-            <li><span>|</span></li>
-            <li>
-                <a href="">注册</a>
-            </li>
-        </ul>
-    </div>
-
+    <header_nav></header_nav>
     <!--s搜索框-->
     <div class="search">
         <form action="" method="post">
@@ -597,7 +571,7 @@
                             </ul>
                         </li>
                         <div class="chaKan">
-                            <a href="#">查看更多</a>
+                            <a href="../company/index.html">查看更多</a>
 
                         </div>
                     </ul>
@@ -614,6 +588,7 @@
 </div>
 <script src="../vue.min.js"></script>
 <script src="../jquery-3.3.1.min.js"></script>
+<script src="../components/header.js"></script>
 <script src="js/indexJs.js" type="text/javascript" charset="utf-8"></script>
 </body>
 

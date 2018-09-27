@@ -4,10 +4,12 @@
     <meta charset="utf-8"/>
     <title>招聘网</title>
     <link rel="stylesheet" href="./detail.css">
+    <link rel="stylesheet" href="../components/global.css">
 </head>
 <body >
 <div id="root">
-    <div id="jianShu">
+    <header_nav></header_nav>
+    <div id="jianShu" style="margin-top: 50px">
         <img id="tuBiao" :src="info.logo" alt="公司图标" title="公司图标"/>
         <div id="jianJie">
             <h2>{{info.name}}</h2>
@@ -60,6 +62,7 @@
 </div>
 <script src="../vue.min.js"></script>
 <script src="../jquery-3.3.1.min.js"></script>
+<script src="../components/header.js"></script>
 <script>
     var app = new Vue({
         el: '#root',

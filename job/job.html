@@ -7,13 +7,15 @@
 		<link rel="stylesheet" type="text/css" href="./job.css">
 		<!-- 引入样式 -->
 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-
+		<link rel="stylesheet" href="../components/global.css">
 	</head>
 
 	<body>
 		<div id="root" class="container">
+			<header_nav></header_nav>
+
 			<!-- 公司 -->
-			<div class="banner">
+			<div class="banner" style="margin-top: 50px">
 				<p>什么值得投</p>
 				<ul>
 					<li>
@@ -166,7 +168,7 @@
 
 					</ul>
 					<!-- 分页 -->
-					<div style="width: 100%;text-align: center">
+					<div style="width: 100%;text-align: center;margin: 30px auto 50px auto">
 						<el-pagination
 								layout="prev, pager, next"
 								:current-page.sync="number"
@@ -183,6 +185,7 @@
 		<!-- 引入组件库 -->
 		<script src="../jquery-3.3.1.min.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<script src="../components/header.js"></script>
 		<script>
             var app = new Vue({
                 el: '#root',
