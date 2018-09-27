@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>招聘网</title>
+    <link rel="stylesheet" href="./detail.css">
+</head>
+<body >
+<div id="root">
+    <div id="jianShu">
+        <img id="tuBiao" :src="info.logo" alt="公司图标" title="公司图标"/>
+        <div id="jianJie">
+            <h2>{{info.name}}</h2>
+            <p>学历要求:{{info.limit}}</p>
+            <p>工资：<span  style="color: red">{{info.salary}}</span></p>
+            <p>公司地點：{{info.address}}</p>
+        </div>
+        <div id="anniuBox">
+            <a href="#" class="anniu" @click="go(info.id)">投递简历</a>
+        </div>
+    </div>
+    <div class="center_container">
+        <div id="miaoShu">
+            <h2>职位描述:</h2>
+            <div id="zhiZhe">
+                <h4>岗位职责：</h4>
+                <p>
+                    1、负责游戏运营日常宣传素材（广告、专题等）；<br/>
+
+                    2、游戏相关设计工作；<br/>
+
+                    3、完成上级安排的其他工作
+                </p>
+            </div>
+            <div id="yaoQiu">
+                <h4>任职要求：</h4>
+                <p>
+                    1.大专及以上学历，视觉设计，动漫设计或平面设计等美术相关专业；<br/>
+
+                    2.掌握Photoshop等设计工具，熟悉Flash或AE优先考虑；<br/>
+
+                    3.基本功扎实，色感敏锐，能把握设计趋势；<br/>
+
+                    4.良好的沟通能力，善于对设计的表达，具有良好的团队协作精神；熟悉网络游戏，对游戏行业充满热情；<br/>
+
+                    5.勇于接受挑战，善于自我激励，具有强烈的学习热情和进取心；<br/>
+
+                    6.有优秀作品的应届生可优先考虑。
+                </p>
+            </div>
+        </div>
+        <div class="right_container">
+            <h4 style="text-align: center">公司简介</h4>
+            <p>地址：{{info.address_all}}</p>
+            <p>分类：<span v-for="i in info.sort">{{i+ ','}}</span></p>
+            <p>公司官网：{{info.web}}</p>
+            <p>公司数量：{{info.person_num}}</p>
+        </div>
+    </div>
+</div>
+<script src="../vue.min.js"></script>
+<script src="../jquery-3.3.1.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#root',
+        data: {
+            info: {}
+        },
+        created(){
+            this.getData()
+        },
+        methods: {
+            go(id){
+                window.location.href= '../set_data/src/Personal.html'
+            },
+            getData(){
+                let that = this
+                $.ajax({
+                    url: 'https://hyjweb.cn/api/getJobDetail',
+                    type: 'get',
+                    data: {
+                        id : window.sessionStorage.getItem('id')
+                    },
+                    dataType: 'json',
+                    success: (data) => {
+                        this.info = data
+                    }
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

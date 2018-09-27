@@ -1,0 +1,300 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none;color:#3F419E;}
+img{display:block;}
+body,html{
+	width:100%;
+	height:100%;
+	
+}	
+input{
+	outline:none;
+	
+}
+/* logo开始*/
+#logo{ 
+	width:500px;
+	height:117px;
+	margin:50px auto 70px;
+
+}
+#logo a{
+	display:block;
+	width:500px;
+	height:117px;
+
+}
+#logo img{
+	display:block;
+	width:500px;
+	height:117px;
+
+}
+.box{
+	width:100%;
+	height:400px;
+	
+}
+/*logo结束*/
+ .box1{
+ 	float:left;
+ 	height:400px;
+    width:600px;
+    border:1px solid white;
+ }
+ .box1 img{
+ 	display:block;
+ 	width:100%;
+ 	height:100%;
+ }
+
+/*登录开始*/
+ .box2{
+ 	float:right;
+ 	width:500px;
+ 	height:400px;
+ 	margin-right:100px;
+ 	border:1px solid black;
+ }
+ .bigBox{
+ 	width:500px;
+ 	height:100%;
+ }
+ .bigBox .login-title{
+ 	width:100%;
+ 	border-bottom:1px dotted #eee;
+ 	position:relative;
+ 	height:60px;
+ 	
+
+ }
+ .bigBox .login-title span{
+ 	position:absolute;
+ 	font-size:18px;
+ 	font-weight:bold;
+    width:73px;
+    height:34px;
+    line-height:34px;
+    color:#262B33;
+    cursor:pointer;
+    top:20px;
+ }
+ .bigBox .login-title span:nth-child(1){
+ 	left:80px;
+ }
+ .bigBox .login-title span:nth-child(2){
+ 	right:80px;
+ }
+
+.yonghu-login{
+	width:500px;
+	height:340px;
+	
+
+}
+#form1,#form2{
+    width:500px;
+   
+
+}
+.yonghuBox,#passW{
+  width:500px;
+  height:53px;
+  position:relative;
+  border-bottom:1px dotted #eee;
+}
+  label, span, input{
+	position:absolute;
+	top:0;
+}
+  label{
+	height:50px;
+	line-height:64px;
+	font-size:18px;
+	left:20px;
+	color:#9fadc6;
+}
+
+  input{
+   width:250px;
+   height:50px;
+   line-height:64px;
+   font-size:18px;
+   left:90px;
+   
+}
+ span{
+	color:red;
+	width:126px;
+	height:32px;
+	line-height:32px;
+	font-size:11px;
+    right:11px;
+    top:19px;
+}
+.yonghu-login input{
+	border:0;
+}
+
+.btn{
+	margin-top:30px;
+	width:500px;
+	height:43px;
+}
+.btn #sumbit{
+	display:block;
+	width:302px;
+	height:43px;
+	margin:0 auto;
+	position:static;
+	line-height:43px;
+	color:white;
+	background-color:rgb(26,138,250);
+	border:0;
+	cursor:pointer;
+}
+
+.login-forget{
+	width:450px;
+	height:20px;
+	margin:20px;
+	border-bottom:1px dotted #eee;
+}
+.login-forget p{
+
+	float:left;
+	width:175px;
+	height:16px;
+	color:#9fadc6;
+	font-size:13px;
+	line-height:16px;
+	
+}
+.login-forget a{
+  color:rgb(26,138,250);
+
+}
+.login-forget a:nth-child(2){
+  float:right;
+}
+.loginOther{
+	width:671px;
+	height:11px;
+}
+#othermethod{
+	height:20px;
+	line-height:20px;
+	margin-left:180px;
+	color:#9fadc6;
+	cursor:pointer;
+
+	
+}
+.loginOther{
+	height:50px;
+	margin-left:170px;
+}
+.loginOther a{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background:red;
+	
+}
+.loginOther a img{
+	display:block;
+	width:50px;
+	height:50px;
+}
+/*登录结束*/
+
+/*短信登录开始*/
+ .duanxing-login .phoneNumber,.duanxing-login .yangzhengma{
+ 	width:460px;
+ 	height:50px;
+ 	margin:20px 20px;
+ 	
+ 	
+
+ }
+ .duanxing-login .phoneNumber #phoneNumber,.duanxing-login #yangzhengma{
+ 	float:left;
+ 	width:300px;
+ 	height:40px;
+ 	padding:5px 5px;
+ 	color:black;
+ 	line-height:40px;
+ 	position:static;
+ 	margin:20px 0 0 5px;
+ 	box-sizing:border-box;
+} 
+.duanxing-login .phoneNumber p{
+	float:right;
+	width:145px;
+	height:40px;
+	color:red;
+	font-size:12px;
+	line-height:40px;
+	margin-top:20px;
+
+}
+.duanxing-login .phoneNumber img{
+	float:right;
+	width:40px;
+	height:40px;
+	margin-top:20px;
+	margin-right:65px;
+}
+.duanxing-login #yangzhengma{
+	width:250px;
+}
+.duanxing-login .yangzhengma p{
+	float:right;
+	width:100px;
+	height:40px;
+	font-size:14px;
+	line-height:40px;
+	margin-top:20px;
+	background-color:#eee;
+	text-align:center;
+	margin-right:30px;
+	color:white;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.duanxing-login .btn #sumbit{
+	margin-top:47px;
+}
+
+/*短信登录结束*/
+
+
+/*注册界面开始*/
+  .bigBox .header{
+  	width:500px;
+  	height:100px;
+  	background-color:red;
+  	position:relative;
+  }
+  .bigBox .header img{
+  	position:absolute;
+  	height:20px;
+  	width:50px;
+  	top:1px;
+  	left:1px;
+  }
+  .bigBox .header .zhuce{
+  	position:absolute;
+  	width:110px;
+  	height:57px;
+  	line-height:57px;
+  	
+  	font-size:25px;
+  	top:30px;
+  	left:190px;
+  	text-align:center;
+  	color:#a8a0b7;
+  }
+/*注册界面结束*/
