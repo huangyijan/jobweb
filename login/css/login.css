@@ -249,7 +249,7 @@ input{
 .duanxing-login #yangzhengma{
 	width:250px;
 }
-.duanxing-login .yangzhengma p{
+.duanxing-login .yangzhengma p,#yanzhengma{
 	float:right;
 	width:100px;
 	height:40px;
@@ -273,17 +273,19 @@ input{
 
 /*注册界面开始*/
   .bigBox .header{
-  	width:500px;
-  	height:100px;
-  	background-color:red;
   	position:relative;
+  	width:500px;
+  	height:78px;
+  	border-bottom:1px dotted black;
+  	
+  	
   }
   .bigBox .header img{
   	position:absolute;
-  	height:20px;
-  	width:50px;
-  	top:1px;
-  	left:1px;
+  	height:36px;
+  	width:87px;
+  	top:21px;
+  	right:38px;
   }
   .bigBox .header .zhuce{
   	position:absolute;
@@ -292,9 +294,29 @@ input{
   	line-height:57px;
   	
   	font-size:25px;
-  	top:30px;
+  	top:18px;
   	left:190px;
   	text-align:center;
   	color:#a8a0b7;
   }
+ /* .shouji input,.mima input,.qurenmima input,.duanxinyangzhengma input{
+  	border:0;
+  }*/
+   #form3 input{
+   	border:0;
+   	left:121px;
+   }
+  
+   #yanzhengma{
+   	margin-top:12px;
+   }
+   #form3 .btn input{
+   	margin-top:-15px;
+   }
+   #form3 .login-forget a:nth-child(3){
+   	margin-left:123px;
+   }
+   #form3 .login-forget{
+   	border-bottom:none;
+   }
 /*注册界面结束*/

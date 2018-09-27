@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>拉勾网招聘</title>
+	<title>招聘网</title>
 	<link type="text/css" rel="stylesheet" href="css/login.css">
 
 </head>
 <body>
-	
+
 	<!--这是设置网站logo部分-->
 	<div id="logo">
 		<a href="#">
@@ -15,16 +15,17 @@
 		</a>
 	</div>
 <div class="box">
-	<div class="box1"><img src="" alt=""></div>
-	<div class="box2">	
-		
+	<div class="box1"><img src="img/qiuzhi.jpg" alt=""></div>
+	<div class="box2">
+
         <div class="bigBox" >
-	        <div class="login-title"style="display:none">
+	        <div class="login-title" style="display:block">
 		        <span>用户登录</span>
-		        <span>短信登录</span></div>
-	 
+		        <span>短信登录</span>
+		    </div>
+
             <!--用户登录-->
-	        <div class="yonghu-login" style="display:none">
+	        <div class="yonghu-login" style="display:block">
 	            <form action="#" method="#"  id="form1">
 	   	            <div class="yonghuBox">
 				        <label for="user" >用户名</label>
@@ -45,7 +46,7 @@
 				            <a>立即注册</a>
 
 				         </p>
-				
+
 				        <a>忘记密码</a>
 			        </div>
 			        <p id="othermethod">使用其他方式登录<p>
@@ -75,23 +76,60 @@
 				        <p>没有拉勾网账号吗
 				        	<a>立即注册</a>
 				        </p>
-				        
-				        
-                        
+
+
+
 				        <a>忘记密码</a>
 			        </div>
 	            </form></div>
 	        <!--注册界面开始-->
-             <div class="header">
-                <img src="img/shouji.jpg" alt="">
+	    <div class="zucejiemian" style="display:none">
+            <div class="header" >
+                <img src="img/shoujizhuce.png" alt="">
              	<h3 class="zhuce">手机注册</h3>
-             </div>
+            </div>
+            <form action="#" method="#"  id="form3">
+              	<div class="yonghuBox shouji">
+				    <label for="user" >手机号</label>
+			        <input type="text" class=".user"id="user" name="yonghuming" value="">
+			        <span class="info">手机号不正确，重新输入</span>
+			    </div>
+			   <div class="yonghuBox mima">
+				    <label for="user" >密码</label>
+			        <input type="passWord" class=".user"id="user" name="yonghuming" value="">
+			        <span class="info">密码不正确，重新输入</span>
+			    </div>
+			    <div class="yonghuBox qurenmima">
+				    <label for="user" >重复密码</label>
+			        <input type="passWord" class=".user"id="user" name="yonghuming" value="">
+			        <span class="info">重复密码不正确重新输入</span>
+			    </div>
+			    <div class="yonghuBox duanxinyangzhengma">
+				    <label for="user" >短信验证码</label>
+			        <input type="text" class=".user"id="user" name="yonghuming" value="">
+			        <p id="yanzhengma">获取验证码</p>
+			    </div>
+			    <div class="btn">
+				    <input id="sumbit" name="submit" type="button" class="login-btn" value="注册">
+			    </div>
+			    <div class="login-forget">
+				        <p>已经有拉勾网账号吗
+				        	<a>直接登录</a>
+				        </p>
+
+
+                        <a>邮箱注册</a>
+				        <a>学生注册</a>
+			    </div>
+            </form>
+        </div>
 	        <!--注册界面结束-->
         </div>
 	</div>
 </div>
-	
-	
+
+
 
 </body>
+
 </html>
