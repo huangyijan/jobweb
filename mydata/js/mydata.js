@@ -3,6 +3,7 @@ function play() {
 	wa.style.visibility = "visible";
 }
 
+
 window.onload = function() {
 	var btn = document.getElementById('btn');
 	btn.onclick = function() {

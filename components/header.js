@@ -20,13 +20,6 @@ Vue.component('header_nav', {
             <li>
                 <a href="../company/index.html">公司</a>
             </li>
-            <li>
-                <a href="#">校园</a>
-            </li>
-            <li>
-                <a href="#">言职</a>
-            </li>
-
         </ul>
         <ul class="navi-login" style="letter-spacing: 3px">
             <li>

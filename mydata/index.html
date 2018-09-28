@@ -5,7 +5,6 @@
     <meta charset="utf-8"/>
     <title></title>
     <link rel="stylesheet" href="css/mydata.css"/>
-    <script src="js/mydata.js"></script>
     <link rel="stylesheet" href="../components/global.css">
 </head>
 
@@ -18,76 +17,117 @@
             <!--求职意愿 -->
             <div class="content-left1">
                 <h1 style="font-family: 楷体, sans-serif;line-height: 100px;color: #fff;text-align: center;">求职意向</h1>
-                <p>姓名:&nbsp;&nbsp;张三</p>
-                <p>性别：&nbsp;&nbsp;男</p>
-                <p>求职状态:&nbsp;&nbsp;应届毕业生</p>
-                <p>期望工作地点:&nbsp;&nbsp;广州</p>
-                <p>期望从事行业:&nbsp;&nbsp;IT</p>
-                <p>期望月薪:&nbsp;&nbsp;10k</p>
+                <p>姓名:&nbsp;&nbsp;{{data_info.name|value}}</p>
+                <p>性别：&nbsp;&nbsp;{{data_info.sex|value}}</p>
+                <p>求职状态:&nbsp;&nbsp;{{data_info.want_work|value}}</p>
+                <p>期望工作地点:&nbsp;&nbsp;{{data_info.address|value}}</p>
+                <p>期望从事行业:&nbsp;&nbsp;{{data_info.profession|value}}</p>
+                <p>期望月薪:&nbsp;&nbsp;{{data_info.salary|value}}</p>
 
             </div>
             <button id="button1" onclick="play()">编辑</button>
             <div class="content-left-wanna" id="content-left-wannan">
                 <h1 style="font-weight: 400;color: snow;position: absolute;left: 40px;top: 40px;margin-right: 50px">求职意向</h1>
                 <form style="padding-right: 200px">
-                    <p>姓名:&nbsp;<input value="张三"></p>
-                    <p>性别:&nbsp;<select>
+                    <p>姓名:&nbsp;<input v-model="data_info.name"></p>
+                    <p>性别:&nbsp;<select v-model="data_info.sex">
                         <option value="男">男</option>
                         <option value="女">女</option>
                     </select></p>
-                    <p>求职状态:&nbsp;<input value="应届毕业生"></p>
-                    <p>期望工作地点:&nbsp;<select>
-                        <option value="广州">广州</option>
-                    </select></p>
-                    <p>期望从事行业:&nbsp;<input value="IT"></p>
-                    <p>期望月薪:&nbsp;<input value="10k"></p>
-                    <input value="提交" type="submit" style="margin-top:0px; left: 50%;width: 50px;height: 25px;"/>
+                    <p>求职状态:&nbsp;<input v-model="data_info.want_work"></p>
+                    <p>期望工作地点：<input v-model="data_info.want_work_address"></p>
+                    <p>期望从事行业:&nbsp;<input v-model="data_info.want_profession"></p>
+                    <p>期望月薪:&nbsp;<input v-model="data_info.want_salary"></p>
+                    <input value="提交" type="button" onclick="hello()" style="margin-top:0px; left: 50%;width: 50px;height: 25px;"/>
                 </form>
             </div>
         </div>
         <div class="content-description">
             <h1>个人履历</h1>
-            <input type="button" value="上传..."/>
-            <img src="img/man.jpg"/>
-            <p>自我描述：</p><textarea required="required"></textarea>
         </div>
+        <textarea id="editor1" style="height: 500px;margin-top: 300px"></textarea>
     </div>
 
     <div id="btn">
         <img src="img/飞机.png"/>
     </div>
-    <div class="footer">
-        <div class="footer1">
-            <ul>
-                <li><h1>企业服务</h1></li>
-                <li><a href="#">APP下载</a></li>
-                <li><a href="#">公司搜索</a></li>
-            </ul>
-        </div>
-        <div class="footer2">
-            <ul>
-                <li><h1>用户帮助</h1></li>
-                <li><a href="#">帮助中心</a></li>
-                <li><a href="#">在线提问</a></li>
-            </ul>
-        </div>
-        <div class="footer3">
-            <ul>
-                <li><h1>联系方式</h1></li>
-                <li><a href="#">服务热线：123456789</a></li>
-                <li><a href="#">企业服务邮箱：123@163.com</a></li>
-                <li><a href="#">联系我们</a></li>
-            </ul>
-        </div>
-    </div>
+    <!--<div class="footer">-->
+        <!--<div class="footer1">-->
+            <!--<ul>-->
+                <!--<li><h1>企业服务</h1></li>-->
+                <!--<li><a href="#">APP下载</a></li>-->
+                <!--<li><a href="#">公司搜索</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="footer2">-->
+            <!--<ul>-->
+                <!--<li><h1>用户帮助</h1></li>-->
+                <!--<li><a href="#">帮助中心</a></li>-->
+                <!--<li><a href="#">在线提问</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="footer3">-->
+            <!--<ul>-->
+                <!--<li><h1>联系方式</h1></li>-->
+                <!--<li><a href="#">服务热线：123456789</a></li>-->
+                <!--<li><a href="#">企业服务邮箱：123@163.com</a></li>-->
+                <!--<li><a href="#">联系我们</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
 <script src="../vue.min.js"></script>
 <script src="../jquery-3.3.1.min.js"></script>
 <script src="../components/header.js"></script>
 <script>
     var app = new Vue({
-        el: '#root'
+        el: '#root',
+        data: {
+            data_info: {}
+        },
+        created(){
+            let that = this
+            $.ajax({
+                url: 'https://hyjweb.cn/api/get_data',
+                type: 'get',
+                success: function (data) {
+                    that.data_info =data[0]
+                }
+            })
+        },
+        filters:{
+            value: function (value) {
+                if(value){
+                    return value
+                }else {
+                    return '未设置'
+                }
+            }
+        }
     })
 </script>
+<script src="js/mydata.js"></script>
+<script src="./tinymce/tinymce.min.js"></script>
+<script src="./tinymce/langs/zh_CN.js"></script>
+<script>
+    function hello() {
+        var wa = document.getElementById("content-left-wannan");
+        wa.style.visibility = "";
+    }
+    tinyMCE.init({
+        // 初始化參數設定[註1]
+        selector: "#editor1", // 目標物件
+        auto_focus: "editor1", // 聚焦物件
+        language: "zh_CN", // 語系(CDN沒有中文，需要下載原始source才有)
+        theme: "modern", // 模板風格
+        plugins : "advlist autolink link image lists charmap print preview", // 套件設定: 進階清單、自動連結、連結、上傳圖片、清單、特殊字元表、列印、預覽
+        mobile: { // 行動裝置設定
+            theme: "mobile", // 模板風格
+            plugins: [ "autosave", "lists", "autolink" ],  // 套件設定: 自動儲存、清單、自動連結
+            toolbar: [ "undo", "bold", "italic", "styleselect" ]  // 工具列設定: 復原、粗體、斜體、樣式表
+        }
+    });
+</script>
+
 </body>
 </html>
