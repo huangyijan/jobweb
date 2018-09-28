@@ -11,40 +11,60 @@
 <div id="container">
     <header_nav></header_nav>
 
-<div style="width: 90%;margin: 0 auto;font-family: 楷体, sans-serif">
-    <img src="img/profile.png" style="margin-top: 50px"/>
-    <h2>nicname</h2>
-    <div id="profile">
+    <div style="width: 90%;margin: 0 auto;font-family: 楷体, sans-serif">
+        <img src="img/profile.png" style="margin-top: 50px"/>
+        <h2>{{personInfo.name}}</h2>
+        <div id="profile">
 				<span>
-					性别：<span id="sex" style="margin-right: 100px;">sex</span> 出生日期：<span id="date">date</span>
+					性别：<span id="sex" style="margin-right: 100px;">{{personInfo.sex|value}}</span> 出生日期：<span id="date">{{personInfo.date|value}}</span>
 				</span>
-        <span>
-					职位：<span id="position">position</span>
+            <span>
+					职位：<span id="position">{{personInfo.profession|value}}</span>
 				</span>
-        <hr style="margin: 0 0 20px;"/>
-        <span>
-					居住地：<span id="locaton">locaton</span>
+            <hr style="margin: 0 0 20px;"/>
+            <span>
+					居住地：<span id="locaton">{{personInfo.address|value}}</span>
 				</span>
-        <span>
-					联系电话：<span id="phone">phone</span>
+            <span>
+					联系电话：<span id="phone">{{personInfo.phone|value}}</span>
 				</span>
-        <span>
-					邮箱：<span id="email">email</span>
+            <span>
+					邮箱：<span id="email">{{personInfo.email|value}}</span>
 				</span>
-        <hr style="margin: 0 0 20px;"/>
-        <span>
+            <hr style="margin: 0 0 20px;"/>
+            <span>
 					简历：<span id="file"><a href="#" style="margin-right: 20px;">编辑简历</a><a href="#">投档历史</a></span>
 				</span>
+        </div>
+        <a href="../../job/set_data/src/Personal.html" id="edit">编辑个人资料</a>
     </div>
-    <a href="#" id="edit">编辑个人资料</a>
-</div>
 </div>
 <script src="../vue.min.js"></script>
 <script src="../jquery-3.3.1.min.js"></script>
 <script src="../components/header.js"></script>
 <script>
     var app = new Vue({
-        el: '#container'
+        el: '#container',
+        data: {
+            personInfo: JSON.parse(window.sessionStorage.getItem('personInfo'))
+        },
+        created() {
+            this.getInfo()
+        },
+        methods: {
+            getInfo() {
+                console.log(personInfo)
+            }
+        },
+        filters:{
+            value: function (value) {
+                if(value){
+                    return value
+                }else {
+                    return '未设置'
+                }
+            }
+        }
     })
 </script>
 </body>

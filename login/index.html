@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>招聘网</title>
+    <link type="text/css" rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<!--这是设置网站logo部分-->
+<div id="logo">
+    <a href="#">
+        招聘网
+    </a>
+</div>
+<div class="box" id="Loin_register">
+    <div class="box1"><img src="img/qiuzhi.jpg" alt=""></div>
+    <div class="box2">
+        <div class="bigBox" id="hezi">
+            <div class="login-title" id="biaoti">
+                <p @click="changeType(true)" :class="{state_line: loginType}">登录</p>
+                <p @click="changeType(false)" :class="{state_line: !loginType}">注册</p>
+            </div>
+            <!--用户登录-->
+            <div class="yonghu-login" id="yonghudenglu" v-if="loginType">
+                <form action="#" method="#" id="form1">
+                    <div class="yonghuBox">
+                        <label for="user">用户名</label>
+                        <input v-model="loginUserName" type="text" class=".user" id="user" name="yonghuming" value="">
+                        <span v-show="loginNameVerification" class="error">用户名不正确，重新输入</span>
+                    </div>
+                    <div id="passW">
+                        <label for="password">密码</label>
+                        <input v-model="loginPsw" type="password" id="password" name="password" value="">
+                        <span v-show="loginPswVerification" class="error">密码有错，请重新输入</span>
+                    </div>
+                    <div class="btn">
+                        <input @click="login" id="sumbit" name="submit" type="button" class="login-btn" value="登陆">
+                        <p v-show="loginError" class="error" style="margin-left: 110px;margin-bottom: 20px">用户或者密码错误</p>
+                    </div>
+                    <div class="login-forget">
+                        <p>
+                            没有招聘网账号？
+                            <a @click="changeType(false)">立即注册</a>
+
+                        </p>
+
+                        <!--<a>忘记密码</a>-->
+                    </div>
+                    <!--<p id="othermethod">使用其他方式登录-->
+                    <!--<p>-->
+                    <!--<div class="loginOther">-->
+
+                        <!--<a><img src="img/weixin.jpg"></a>-->
+                        <!--<a><img src="img/qq.jpg"></a>-->
+                        <!--<a><img src="img/weibo.jpg"></a>-->
+                    <!--</div>-->
+                </form>
+            </div>
+
+            <!--注册界面开始-->
+            <div class="zucejiemian" id="zhucejiemian" v-if="!loginType">
+                <form action="#" method="#" id="form3">
+                    <div class="yonghuBox shouji">
+                        <label for="user">用户名</label>
+                        <input v-model="registerUser" type="text" class="user1" id="user" name="yonghuming" value="">
+                        <span v-show="registerNameVerification" class="error">用户名不能为空</span>
+                    </div>
+                    <div class="yonghuBox duanxinyangzhengma">
+                        <label for="user">密码</label>
+                        <input v-model="registerPsw" type="password" class=".user" id="user" name="yonghuming" value="">
+                        <span v-show="registerPswVerification" class="error">密码为6-16位</span>
+                    </div>
+                    <div class="btn">
+                        <input @click="register" id="sumbit" name="submit" type="button" class="login-btn" value="注册">
+                        <p v-show="registerError" class="error" style="margin-left: 110px;margin-bottom: 20px">用户已存在</p>
+                    </div>
+                    <div class="login-forget">
+                        <p>已经有招聘网账号吗
+                            <a @click="changeType(true)">直接登录</a>
+                        </p>
+                        <!--<a>邮箱注册</a>-->
+                        <!--<a>学生注册</a>-->
+                    </div>
+                </form>
+            </div>
+            <!--注册界面结束-->
+            <div v-show="registerSuccess" class="registerSuccess">
+                注册成功
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../vue.min.js"></script>
+<script src="../jquery-3.3.1.min.js"></script>
+<script src="js/login.js"></script>
+</html>

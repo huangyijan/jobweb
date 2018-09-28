@@ -1,7 +1,7 @@
 @charset "utf-8";
 *{margin:0;padding:0;}
 ul,li{list-style:none;}
-a{text-decoration:none;color:#3F419E;}
+a{text-decoration:none;color:#3F419E;cursor: pointer;}
 img{display:block;}
 body,html{
 	width:100%;
@@ -10,26 +10,24 @@ body,html{
 }	
 input{
 	outline:none;
-	
 }
 /* logo开始*/
 #logo{ 
 	width:500px;
 	height:117px;
-	margin:50px auto 70px;
+	margin:30px auto 40px;
 
 }
 #logo a{
+	font-weight: 600;
+	color: black;
+	font-size: 100px;
+	font-family: "arial, helvetica, sans-serif";
 	display:block;
 	width:500px;
 	height:117px;
-
-}
-#logo img{
-	display:block;
-	width:500px;
-	height:117px;
-
+	text-align: center;
+	vertical-align: center;
 }
 .box{
 	width:100%;
@@ -55,9 +53,10 @@ input{
  	width:500px;
  	height:400px;
  	margin-right:100px;
- 	border:1px solid black;
+ 	
  }
- .bigBox{
+ #hezi{
+ 	border:1px solid black;
  	width:500px;
  	height:100%;
  }
@@ -66,32 +65,24 @@ input{
  	border-bottom:1px dotted #eee;
  	position:relative;
  	height:60px;
- 	
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 60px;
+  font-size: 20px;
  }
- .bigBox .login-title span{
- 	position:absolute;
- 	font-size:18px;
- 	font-weight:bold;
-    width:73px;
-    height:34px;
-    line-height:34px;
-    color:#262B33;
-    cursor:pointer;
-    top:20px;
+ .bigBox .login-title p{
+  cursor: pointer;
  }
- .bigBox .login-title span:nth-child(1){
- 	left:80px;
- }
- .bigBox .login-title span:nth-child(2){
- 	right:80px;
+ #biaoti{
+ 	visibility: visible;
  }
 
-.yonghu-login{
+
+#yonghu-login{
 	width:500px;
 	height:340px;
-	
-
+	visibility: visible;
 }
 #form1,#form2{
     width:500px;
@@ -110,7 +101,7 @@ input{
 }
   label{
 	height:50px;
-	line-height:64px;
+	line-height:48px;
 	font-size:18px;
 	left:20px;
 	color:#9fadc6;
@@ -119,19 +110,19 @@ input{
   input{
    width:250px;
    height:50px;
-   line-height:64px;
+   line-height:50px;
    font-size:18px;
    left:90px;
    
 }
  span{
 	color:red;
-	width:126px;
+	width:150px;
 	height:32px;
-	line-height:32px;
+	line-height:20px;
 	font-size:11px;
-    right:11px;
-    top:19px;
+  right:20px;
+  top:19px;
 }
 .yonghu-login input{
 	border:0;
@@ -203,77 +194,14 @@ input{
 	
 }
 .loginOther a img{
+	background-color: white;
 	display:block;
-	width:50px;
 	height:50px;
 }
 /*登录结束*/
-
-/*短信登录开始*/
- .duanxing-login .phoneNumber,.duanxing-login .yangzhengma{
- 	width:460px;
- 	height:50px;
- 	margin:20px 20px;
- 	
- 	
-
- }
- .duanxing-login .phoneNumber #phoneNumber,.duanxing-login #yangzhengma{
- 	float:left;
- 	width:300px;
- 	height:40px;
- 	padding:5px 5px;
- 	color:black;
- 	line-height:40px;
- 	position:static;
- 	margin:20px 0 0 5px;
- 	box-sizing:border-box;
-} 
-.duanxing-login .phoneNumber p{
-	float:right;
-	width:145px;
-	height:40px;
-	color:red;
-	font-size:12px;
-	line-height:40px;
-	margin-top:20px;
-
-}
-.duanxing-login .phoneNumber img{
-	float:right;
-	width:40px;
-	height:40px;
-	margin-top:20px;
-	margin-right:65px;
-}
-.duanxing-login #yangzhengma{
-	width:250px;
-}
-.duanxing-login .yangzhengma p,#yanzhengma{
-	float:right;
-	width:100px;
-	height:40px;
-	font-size:14px;
-	line-height:40px;
-	margin-top:20px;
-	background-color:#eee;
-	text-align:center;
-	margin-right:30px;
-	color:white;
-	font-weight:bold;
-	cursor:pointer;
-}
-
-.duanxing-login .btn #sumbit{
-	margin-top:47px;
-}
-
-/*短信登录结束*/
-
-
 /*注册界面开始*/
-  .bigBox .header{
-  	position:relative;
+  .bigBox{
+  	
   	width:500px;
   	height:78px;
   	border-bottom:1px dotted black;
@@ -292,7 +220,6 @@ input{
   	width:110px;
   	height:57px;
   	line-height:57px;
-  	
   	font-size:25px;
   	top:18px;
   	left:190px;
@@ -308,8 +235,11 @@ input{
    }
   
    #yanzhengma{
-   	margin-top:12px;
-   }
+   	cursor: pointer;
+   	color: black;
+   	font-size: medium;
+   	line-height: 20px;	
+   	}
    #form3 .btn input{
    	margin-top:-15px;
    }
@@ -320,3 +250,77 @@ input{
    	border-bottom:none;
    }
 /*注册界面结束*/
+#zhucejiemian{
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	margin-right: 100px;
+ 	top: 240px;
+ 	float: right;
+}
+.header span:nth-child(1){
+	margin-left: 80px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    width: 73px;
+    height: 34px;
+    line-height: 34px;
+    color: #262B33;
+    cursor: pointer;
+    top: 20px;
+    left: 20px;
+}
+.header span:nth-child(2){
+	margin-left: 80px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    width: 73px;
+    height: 34px;
+    line-height: 34px;
+    color: #262B33;
+    cursor: pointer;
+    top: 20px;
+    right: 80px;
+}
+.header{
+	position:relative;
+	width: 500px;
+	height: 60px;
+	border-bottom: 1px dotted #eee;
+}
+
+.info{
+  display: none;
+}
+.error {
+  color:red;
+  width:150px;
+  height:32px;
+  line-height:20px;
+  font-size:11px;
+  right:20px;
+  top:19px;
+  display: block;
+}
+.state_line {
+  padding: 0 5px;
+  border-bottom: 2px solid red;
+}
+
+.registerSuccess {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  border-radius: 30px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 26px;
+  color: #fff;
+  background: rgba(0, 0, 0, .3);
+}
