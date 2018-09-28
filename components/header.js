@@ -5,6 +5,12 @@ Vue.component('header_nav', {
             userInfo:　window.sessionStorage.getItem('personInfo')
         }
     },
+    methods:{
+        logout(){
+            window.sessionStorage.setItem('personInfo','')
+            this.showPersonName = false
+        }
+    },
     template: `<!--导航栏Top-->
     <div id="navi">
         <ul class="navi-list" style="letter-spacing: 5px">
@@ -31,6 +37,10 @@ Vue.component('header_nav', {
             <li>
                 <a  v-if="!showPersonName">注册</a>
                 <a href="../person/file.html" v-if="showPersonName">个人中心</a>
+            </li>
+            <li v-if="showPersonName"><span>|</span></li>
+            <li v-if="showPersonName">
+                <a href="#" @click="logout" v-if="showPersonName">退出登陆</a>
             </li>
         </ul>
     </div>`
